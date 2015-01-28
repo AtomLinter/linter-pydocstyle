@@ -1,16 +1,11 @@
 linterPath = atom.packages.getLoadedPackage("linter").path
 Linter = require "#{linterPath}/lib/linter"
 
-configLabelCodes = 'linter-pep257.Error codes to ignore (comma separated)'
-configLabelExec = 'linter-pep257.Path to executeable pep257 cmd'
-
 class Linterpep257 extends Linter
   @syntax: 'source.python'
-
-  cmd: 'pep257'
-  executablePath: null
   linterName: 'pep257'
   errorStream: 'stderr'
+  defaultLevel: 'warning'
 
   # Regex to capture output such as:
   #   /Path/to/file.py:1 at module level:
@@ -20,21 +15,18 @@ class Linterpep257 extends Linter
   regex: ':(?<line>\\d+).*\\s+(?<message>.*)'
 
   constructor: (editor)->
-
     super(editor)
-    @executablePath = atom.config.get configLabelExec
-
-    atom.config.observe configLabelCodes, =>
-      @updateCommand()
+    atom.config.observe 'linter-pep257.execPath', => @updateCommand()
+    atom.config.observe 'linter-pep257.ignoreCodes', => @updateCommand()
 
   destroy: ->
-    atom.config.unobserve configLabelCodes
+    atom.config.unobserve 'linter-pep257.execPath'
+    atom.config.unobserve 'linter-pep257.ignoreCodes'
 
   updateCommand: ->
-    cmd = 'pep257'
-    errorCodes = atom.config.get configLabelCodes
-    if errorCodes
-      cmd = "#{cmd} --ignore=#{errorCodes}"
+    cmd = [atom.config.get 'linter-pep257.execPath']
+    ignoreCodes = atom.config.get 'linter-pep257.ignoreCodes'
+    cmd.push "--ignore=#{ignoreCodes}" if ignoreCodes
     @cmd = cmd
 
 module.exports = Linterpep257
