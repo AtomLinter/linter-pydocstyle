@@ -5,7 +5,7 @@ class Linterpep257 extends Linter
   @syntax: 'source.python'
   linterName: 'pep257'
   errorStream: 'stderr'
-  defaultLevel: 'warning'
+  defaultLevel: 'info'
 
   # Regex to capture output such as:
   #   /Path/to/file.py:1 at module level:

@@ -3,9 +3,18 @@ linter-pep257
 
 A [Linter][] plugin to lint Python docstrings according to the semantics and conventions spec'd in [pep257][spec].
 
+In use side-by-side with the flake8 linter:
+
+![Screenshot of pep257 feedback](https://raw.githubusercontent.com/AtomLinter/linter-pep257/master/screenshot.png)
+
 ## Installation
 
 1. If Linter is not already installed, follow the [linter installation instructions][linter-install].
+
+1. Configure linter to show "info" messages:
+
+  * Open the config for Linter.
+  * Check option "Show Info Messages".
 
 1. Install python package [pep257][].
 
@@ -20,7 +29,6 @@ A [Linter][] plugin to lint Python docstrings according to the semantics and con
   ```
   apm install linter-pep257
   ```
-
 
 ## Configuration
 
