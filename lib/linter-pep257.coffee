@@ -16,12 +16,14 @@ class Linterpep257 extends Linter
 
   constructor: (editor)->
     super(editor)
-    @execPathListener = atom.config.observe 'linter-pep257.execPath',
-      => @updateCommand()
-    @ignoreCodesListener = atom.config.observe 'linter-pep257.ignoreCodes',
-      => @updateCommand()
+
+    @execPathListener = atom.config.observe 'linter-pep257.execPath', =>
+      @updateCommand()
+    @ignoreCodesListener = atom.config.observe 'linter-pep257.ignoreCodes', =>
+      @updateCommand()
 
   destroy: ->
+    super
     @execPathListener.dispose()
     @ignoreCodesListener.dispose()
 
