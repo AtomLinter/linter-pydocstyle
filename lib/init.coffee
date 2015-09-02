@@ -38,7 +38,7 @@ module.exports =
     messages = helpers.parse(output,
                              "^(?<file>.+):(?<line>\\d+)\\s+(?<message>.+)")
     messages.forEach (msg) ->
-      msg.type = "pep257"
+      msg.type = "Info"
     return messages
 
   provideLinter: ->
