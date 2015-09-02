@@ -1,6 +1,5 @@
 {
   "name": "linter-pep257",
-  "linter-package": true,
   "main": "./lib/init",
   "version": "0.2.1",
   "description": "Lint Python docstrings on the fly.",
@@ -9,5 +8,14 @@
   "engines": {
     "atom": ">0.50.0"
   },
-  "dependencies": {}
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  },
+  "dependencies": {
+    "atom-linter": "^3.2.0"
+  }
 }
