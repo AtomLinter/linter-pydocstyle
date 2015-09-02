@@ -5,7 +5,7 @@ A [Linter][] plugin to lint Python docstrings according to the semantics and con
 
 In use side-by-side with the flake8 linter:
 
-![Screenshot of pep257 feedback](https://raw.githubusercontent.com/AtomLinter/linter-pep257/master/screenshot.png)
+![Screenshot of pep257 feedback](https://cloud.githubusercontent.com/assets/154988/9623112/5ee0bf1e-510a-11e5-815b-a339fa85ebac.png)
 
 ## Installation
 
