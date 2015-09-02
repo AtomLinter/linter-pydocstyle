@@ -16,7 +16,7 @@ In use side-by-side with the flake8 linter:
   pip install pep257
   ```
 
-1. Install plugin, run:
+1. Install package, run:
   ```
   apm install linter-pep257
   ```
