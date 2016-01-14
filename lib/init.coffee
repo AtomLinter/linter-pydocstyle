@@ -36,7 +36,8 @@ module.exports =
     # parse lint output
     output = output.replace(/:[\r\n]\s+/mg, " | ") # combine multiline output
     messages = helpers.parse(output,
-                             "^(?<file>.+):(?<line>\\d+)\\s+(?<message>.+)")
+                             "^(?<file>.+):(?<line>\\d+).+ \\| (?<message>.+)",
+                             {flags: 'gm'})
     messages.forEach (msg) ->
       msg.type = "Info"
     return messages
