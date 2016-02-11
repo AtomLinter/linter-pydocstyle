@@ -13,6 +13,10 @@ module.exports =
       default: ''
       description: ('Comma separated list of error codes to ignore. ' +
         'Available codes: https://pypi.python.org/pypi/pep257#error-codes')
+    ignoreFiles:
+      type: 'string'
+      default: ''
+      description: 'Filename pattern to ignore, e.g.: test_; Restart Atom to activate/deactivate.'
 
   activate: ->
     @subscriptions = new CompositeDisposable
@@ -22,6 +26,9 @@ module.exports =
     @subscriptions.add atom.config.observe 'linter-pep257.ignoreCodes',
       (ignoreCodes) =>
         @ignoreCodes = ignoreCodes
+    @subscriptions.add atom.config.observe 'linter-pep257.ignoreFiles',
+      (ignoreFiles) =>
+        @ignoreFiles = ignoreFiles
 
   deactivate: ->
     @subscriptions.dispose()
@@ -48,5 +55,7 @@ module.exports =
       scope: 'file'
       lintOnFly: true
       lint: (textEditor) =>
-        return @lintPath textEditor.getPath()
-          .then @parseMessages
+        if (@ignoreFiles == '' || textEditor.getPath().indexOf(@ignoreFiles) == -1)
+          return @lintPath textEditor.getPath()
+            .then @parseMessages
+
