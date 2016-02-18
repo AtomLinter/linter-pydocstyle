@@ -6,13 +6,13 @@ module.exports =
     executablePath:
       title: 'Executable Path'
       type: 'string'
-      default: 'pep257'
-      description: "Path to executable pep257 cmd."
+      default: 'pydocstyle'
+      description: "Path to executable pydocstyle cmd."
     ignoreCodes:
       type: 'string'
       default: ''
       description: ('Comma separated list of error codes to ignore. ' +
-        'Available codes: https://pypi.python.org/pypi/pep257#error-codes')
+        'Available codes: https://pypi.python.org/pypi/pydocstyle#error-codes')
     ignoreFiles:
       type: 'string'
       default: ''
@@ -21,13 +21,13 @@ module.exports =
   activate: ->
     require('atom-package-deps').install('linter-pep257')
     @subscriptions = new CompositeDisposable
-    @subscriptions.add atom.config.observe 'linter-pep257.executablePath',
+    @subscriptions.add atom.config.observe 'linter-pydocstyle.executablePath',
       (executablePath) =>
         @executablePath = executablePath
-    @subscriptions.add atom.config.observe 'linter-pep257.ignoreCodes',
+    @subscriptions.add atom.config.observe 'linter-pydocstyle.ignoreCodes',
       (ignoreCodes) =>
         @ignoreCodes = ignoreCodes
-    @subscriptions.add atom.config.observe 'linter-pep257.ignoreFiles',
+    @subscriptions.add atom.config.observe 'linter-pydocstyle.ignoreFiles',
       (ignoreFiles) =>
         @ignoreFiles = ignoreFiles
 

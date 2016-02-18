@@ -1,4 +1,4 @@
-LinterPEP257 = require '../lib/init'
+LinterPydocstyle = require '../lib/init'
 path = require 'path'
 
 goodPath = path.join(__dirname, 'fixtures', 'good.py')
@@ -9,15 +9,15 @@ describe "starts everything up", ->
   lint = require('../lib/init').provideLinter().lint
   beforeEach ->
     waitsForPromise ->
-      atom.packages.activatePackage('linter-pep257')
+      atom.packages.activatePackage('linter-pydocstyle')
     waitsForPromise ->
       atom.packages.activatePackage("language-python")
 
   it 'should be in the package list', ->
-    expect(atom.packages.isPackageLoaded('linter-pep257')).toBe true
+    expect(atom.packages.isPackageLoaded('linter-pydocstyle')).toBe true
 
   it 'should have activated the package', ->
-    expect(atom.packages.isPackageActive('linter-pep257')).toBe true
+    expect(atom.packages.isPackageActive('linter-pydocstyle')).toBe true
 
   describe "reads good.py and", ->
     editor = null
