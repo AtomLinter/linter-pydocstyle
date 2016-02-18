@@ -1,7 +1,23 @@
 # Change Log
 
-## [0.3.3](https://github.com/AtomLinter/linter-pep257/tree/0.3.3) (2016-01-14)
-[Full Changelog](https://github.com/AtomLinter/linter-pep257/compare/v0.3.2...0.3.3)
+## [v0.4.0](https://github.com/AtomLinter/linter-pep257/tree/v0.4.0) (2016-02-15)
+[Full Changelog](https://github.com/AtomLinter/linter-pep257/compare/v0.3.4...v0.4.0)
+
+**Merged pull requests:**
+
+- atom-linter@4.5.0 untested ⚠️ [\#35](https://github.com/AtomLinter/linter-pep257/pull/35) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Ignore test files. [\#33](https://github.com/AtomLinter/linter-pep257/pull/33) ([julesjulian](https://github.com/julesjulian))
+- atom-linter@4.4.0 untested ⚠️ [\#30](https://github.com/AtomLinter/linter-pep257/pull/30) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+
+## [v0.3.4](https://github.com/AtomLinter/linter-pep257/tree/v0.3.4) (2016-01-22)
+[Full Changelog](https://github.com/AtomLinter/linter-pep257/compare/v0.3.3...v0.3.4)
+
+**Fixed bugs:**
+
+- SyntaxError: Invalid flags supplied to RegExp constructor 'gmg' [\#29](https://github.com/AtomLinter/linter-pep257/issues/29)
+
+## [v0.3.3](https://github.com/AtomLinter/linter-pep257/tree/v0.3.3) (2016-01-14)
+[Full Changelog](https://github.com/AtomLinter/linter-pep257/compare/v0.3.2...v0.3.3)
 
 **Merged pull requests:**
 
