@@ -53,7 +53,7 @@ module.exports =
     provider =
       grammarScopes: ['source.python']
       scope: 'file'
-      lintOnFly: true
+      lintOnFly: false
       lint: (textEditor) =>
         if (@ignoreFiles == '' || textEditor.getPath().indexOf(@ignoreFiles) == -1)
           return @lintPath textEditor.getPath()
