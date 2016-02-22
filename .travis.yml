@@ -8,9 +8,6 @@ notifications:
 git:
   depth: 10
 
-sudo:
-  false
-
 os:
   - linux
   - osx
