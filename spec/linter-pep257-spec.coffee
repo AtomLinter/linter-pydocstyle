@@ -1,4 +1,4 @@
-# LinterPEP257 = require '../lib/init'
+LinterPEP257 = require '../lib/init'
 
 describe "when everything is started up", ->
   it "has some expectations that should pass", ->
