@@ -20,6 +20,6 @@
     "atom-package-dependencies": "latest"
   },
   "package-deps": [
-    "linter"
+    "atom-linter"
   ]
 }
