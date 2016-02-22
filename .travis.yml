@@ -7,7 +7,6 @@ notifications:
 
 os:
   - linux
-  - osx
 
 git:
   depth: 10
