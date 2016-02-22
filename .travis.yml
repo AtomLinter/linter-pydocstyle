@@ -9,6 +9,9 @@ os:
   - linux
   - osx
 
+git:
+  depth: 10
+
 env:
   global:
     - APM_TEST_PACKAGES=""
