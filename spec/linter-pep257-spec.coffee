@@ -46,3 +46,21 @@ describe "starts everything up", ->
         lint(editor).then (msgs) -> messages = msgs
       runs ->
         expect(messages.length).toBeGreaterThan 0
+
+    it 'finds the right things to complain about', ->
+      messages = null
+      waitsForPromise ->
+        lint(editor).then (msgs) -> messages = msgs
+      runs ->
+        expect(messages[0].text).toEqual('D100: Missing docstring in public module')
+        expect(messages[0].range).toEqual([[0,0],[0,0]])
+        expect(messages[0].type).toEqual('Info')
+        expect(messages[0].filePath).toEqual(badPath)
+        expect(messages[1].text).toEqual('D103: Missing docstring in public function')
+        expect(messages[1].range).toEqual([[0,0],[0,0]])
+        expect(messages[1].type).toEqual('Info')
+        expect(messages[1].filePath).toEqual(badPath)
+        expect(messages[2].text).toEqual('D103: Missing docstring in public function')
+        expect(messages[2].range).toEqual([[3,0],[3,0]])
+        expect(messages[2].type).toEqual('Info')
+        expect(messages[2].filePath).toEqual(badPath)
