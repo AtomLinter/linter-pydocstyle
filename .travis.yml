@@ -11,7 +11,7 @@ os:
 
 env:
   global:
-    - APM_TEST_PACKAGES="atom-linter"
+    - APM_TEST_PACKAGES=""
 
   matrix:
     - ATOM_CHANNEL=stable
