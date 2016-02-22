@@ -15,6 +15,8 @@ python:
 git:
   depth: 10
 
+sudo: required
+
 env:
   global:
     - APM_TEST_PACKAGES=""
@@ -23,6 +25,6 @@ env:
     - ATOM_CHANNEL=stable
     - ATOM_CHANNEL=beta
 
-install: "pip install --user pep257"
+install: "pip install pep257"
 
 script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
