@@ -19,6 +19,7 @@ module.exports =
       description: 'Filename pattern to ignore, e.g.: test_; Restart Atom to activate/deactivate.'
 
   activate: ->
+    require('atom-package-deps').install('linter-pep257')
     @subscriptions = new CompositeDisposable
     @subscriptions.add atom.config.observe 'linter-pep257.executablePath',
       (executablePath) =>
@@ -58,4 +59,3 @@ module.exports =
         if (@ignoreFiles == '' || textEditor.getPath().indexOf(@ignoreFiles) == -1)
           return @lintPath textEditor.getPath()
             .then @parseMessages
-
