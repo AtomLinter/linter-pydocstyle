@@ -60,7 +60,3 @@ describe "starts everything up", ->
         expect(messages[1].range).toEqual([[0,0],[0,0]])
         expect(messages[1].type).toEqual('Info')
         expect(messages[1].filePath).toEqual(badPath)
-        expect(messages[2].text).toEqual('D103: Missing docstring in public function')
-        expect(messages[2].range).toEqual([[3,0],[3,0]])
-        expect(messages[2].type).toEqual('Info')
-        expect(messages[2].filePath).toEqual(badPath)
