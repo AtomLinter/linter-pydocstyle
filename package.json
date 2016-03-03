@@ -1,5 +1,5 @@
 {
-  "name": "linter-pep257",
+  "name": "linter-pydocstyle",
   "main": "./lib/init",
   "version": "0.4.0",
   "description": "Lint Python docstrings on the fly.",
