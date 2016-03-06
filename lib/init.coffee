@@ -19,7 +19,7 @@ module.exports =
       description: 'Filename pattern to ignore, e.g.: test_; Restart Atom to activate/deactivate.'
 
   activate: ->
-    require('atom-package-deps').install('linter-pep257')
+    require('atom-package-deps').install('linter-pydocstyle')
     @subscriptions = new CompositeDisposable
     @subscriptions.add atom.config.observe 'linter-pydocstyle.executablePath',
       (executablePath) =>
