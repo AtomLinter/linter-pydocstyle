@@ -38,7 +38,8 @@ module.exports =
     params = [filePath]
     if @ignoreCodes
       params.push("--add-ignore=" + @ignoreCodes)
-    return helpers.exec(@executablePath, params, {stream: 'stderr'})
+    options = { stream: 'stderr', allowEmptyStderr: true }
+    return helpers.exec(@executablePath, params, options)
 
   parseMessages: (output) ->
     # parse lint output
