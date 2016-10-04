@@ -1,7 +1,7 @@
 {
   "name": "linter-pydocstyle",
   "main": "./lib/init",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Lint Python docstrings on the fly.",
   "repository": "https://github.com/AtomLinter/linter-pydocstyle",
   "license": "MIT",
