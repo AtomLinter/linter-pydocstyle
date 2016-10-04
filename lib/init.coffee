@@ -8,15 +8,24 @@ module.exports =
       type: 'string'
       default: 'pydocstyle'
       description: "Path to executable pydocstyle cmd."
+      order: 1
+    addSelectCodes:
+      type: 'string'
+      default: ''
+      description: ('Comma separated list of error codes to amend. ' +
+        'Available codes: http://www.pydocstyle.org/en/latest/error_codes.html')
+      order: 2
     ignoreCodes:
       type: 'string'
       default: ''
       description: ('Comma separated list of error codes to ignore. ' +
-        'Available codes: https://pypi.python.org/pypi/pydocstyle#error-codes')
+        'Available codes: http://www.pydocstyle.org/en/latest/error_codes.html')
+      order: 3
     ignoreFiles:
       type: 'string'
       default: ''
       description: 'Filename pattern to ignore, e.g.: test_; Restart Atom to activate/deactivate.'
+      order: 4
 
   activate: ->
     require('atom-package-deps').install('linter-pydocstyle')
@@ -24,6 +33,9 @@ module.exports =
     @subscriptions.add atom.config.observe 'linter-pydocstyle.executablePath',
       (executablePath) =>
         @executablePath = executablePath
+    @subscriptions.add atom.config.observe 'linter-pydocstyle.addSelectCodes',
+      (addSelectCodes) =>
+        @addSelectCodes = addSelectCodes
     @subscriptions.add atom.config.observe 'linter-pydocstyle.ignoreCodes',
       (ignoreCodes) =>
         @ignoreCodes = ignoreCodes
@@ -36,6 +48,8 @@ module.exports =
 
   lintPath: (filePath)->
     params = [filePath]
+    if @addSelectCodes
+      params.push("--add-select=" + @addSelectCodes)
     if @ignoreCodes
       params.push("--add-ignore=" + @ignoreCodes)
     options = { stream: 'stderr', allowEmptyStderr: true }
