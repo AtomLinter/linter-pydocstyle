@@ -1,7 +1,28 @@
 # Change Log
 
-## [0.4.2](https://github.com/AtomLinter/linter-pydocstyle/tree/0.4.2) (2016-03-11)
-[Full Changelog](https://github.com/AtomLinter/linter-pydocstyle/compare/v0.4.1...0.4.2)
+## [v0.4.3](https://github.com/AtomLinter/linter-pydocstyle/tree/v0.4.3) (2016-10-04)
+[Full Changelog](https://github.com/AtomLinter/linter-pydocstyle/compare/v0.4.2...v0.4.3)
+
+**Implemented enhancements:**
+
+- add option to append select codes [\#59](https://github.com/AtomLinter/linter-pydocstyle/pull/59) ([dirk-thomas](https://github.com/dirk-thomas))
+- Update atom-linter to version 8.0.0 🚀 [\#58](https://github.com/AtomLinter/linter-pydocstyle/pull/58) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+
+**Fixed bugs:**
+
+- Changelog is not up to date. [\#48](https://github.com/AtomLinter/linter-pydocstyle/issues/48)
+- add option to append select codes [\#59](https://github.com/AtomLinter/linter-pydocstyle/pull/59) ([dirk-thomas](https://github.com/dirk-thomas))
+
+**Closed issues:**
+
+- Update atomlinter.github.io [\#51](https://github.com/AtomLinter/linter-pydocstyle/issues/51)
+
+**Merged pull requests:**
+
+- Force the EOL to LF [\#49](https://github.com/AtomLinter/linter-pydocstyle/pull/49) ([Arcanemagus](https://github.com/Arcanemagus))
+
+## [v0.4.2](https://github.com/AtomLinter/linter-pydocstyle/tree/v0.4.2) (2016-03-11)
+[Full Changelog](https://github.com/AtomLinter/linter-pydocstyle/compare/v0.4.1...v0.4.2)
 
 **Fixed bugs:**
 
