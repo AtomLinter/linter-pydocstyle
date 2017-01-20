@@ -12,14 +12,12 @@ matrix:
       language: generic
       before_install:
         - brew update
-        # Need a way to check if it's installed already or not...
-        - brew install python
+        - brew list python || brew install python
     - os: osx
       language: generic
       before_install:
         - brew update
-        # Need a way to check if it's installed already or not...
-        - brew install python
+        - brew list python || brew install python
       env: ATOM_CHANNEL=beta
 
 install:
