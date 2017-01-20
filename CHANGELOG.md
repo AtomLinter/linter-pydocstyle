@@ -1,5 +1,16 @@
 # Change Log
 
+## [v0.4.4](https://github.com/AtomLinter/linter-pydocstyle/tree/v0.4.4) (2017-01-20)
+[Full Changelog](https://github.com/AtomLinter/linter-pydocstyle/compare/v0.4.3...v0.4.4)
+
+**Closed issues:**
+
+- remove unused styles addressing deprecation warning in Atom 1.13 (and higher) [\#61](https://github.com/AtomLinter/linter-pydocstyle/issues/61)
+
+**Merged pull requests:**
+
+- remove unused styles [\#62](https://github.com/AtomLinter/linter-pydocstyle/pull/62) ([dirk-thomas](https://github.com/dirk-thomas))
+
 ## [v0.4.3](https://github.com/AtomLinter/linter-pydocstyle/tree/v0.4.3) (2016-10-04)
 [Full Changelog](https://github.com/AtomLinter/linter-pydocstyle/compare/v0.4.2...v0.4.3)
 
