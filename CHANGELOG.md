@@ -1,5 +1,12 @@
 # Change Log
 
+## [v0.4.5](https://github.com/AtomLinter/linter-pydocstyle/tree/v0.4.5) (2017-02-13)
+[Full Changelog](https://github.com/AtomLinter/linter-pydocstyle/compare/v0.4.4...v0.4.5)
+
+**Implemented enhancements:**
+
+- Update atom-linter to the latest version 🚀 [\#63](https://github.com/AtomLinter/linter-pydocstyle/pull/63) ([greenkeeper[bot]](https://github.com/integration/greenkeeper))
+
 ## [v0.4.4](https://github.com/AtomLinter/linter-pydocstyle/tree/v0.4.4) (2017-01-20)
 [Full Changelog](https://github.com/AtomLinter/linter-pydocstyle/compare/v0.4.3...v0.4.4)
 
