@@ -67,6 +67,7 @@ module.exports =
 
   provideLinter: ->
     provider =
+      name: 'pydocstyle'
       grammarScopes: ['source.python']
       scope: 'file'
       lintOnFly: false
