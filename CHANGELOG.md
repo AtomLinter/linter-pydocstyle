@@ -1,6 +1,13 @@
 # Change Log
 
-## [v0.4.5](https://github.com/AtomLinter/linter-pydocstyle/tree/v0.4.5) (2017-02-13)
+## [v0.4.6](https://github.com/AtomLinter/linter-pydocstyle/tree/v0.4.6) (2017-04-09)
+[Full Changelog](https://github.com/AtomLinter/linter-pydocstyle/compare/v0.4.5...v0.4.6)
+
+**Implemented enhancements:**
+
+- Add linter name [\#64](https://github.com/AtomLinter/linter-pydocstyle/pull/64) ([willfrey](https://github.com/willfrey))
+
+## [v0.4.5](https://github.com/AtomLinter/linter-pydocstyle/tree/v0.4.5) (2017-02-14)
 [Full Changelog](https://github.com/AtomLinter/linter-pydocstyle/compare/v0.4.4...v0.4.5)
 
 **Implemented enhancements:**
