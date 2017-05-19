@@ -55,11 +55,11 @@ describe "The pydocstyle provider for Linter", ->
       runs ->
         msg1 = 'D100: Missing docstring in public module'
         msg2 = 'D103: Missing docstring in public function'
-        expect(messages[0].text).toBe(msg1)
-        expect(messages[0].range).toEqual([[0,0],[0,0]])
-        expect(messages[0].type).toBe('Info')
-        expect(messages[0].filePath).toMatch(badPathRegex)
-        expect(messages[1].text).toBe(msg2)
-        expect(messages[1].range).toEqual([[0,0],[0,0]])
-        expect(messages[1].type).toBe('Info')
-        expect(messages[1].filePath).toMatch(badPathRegex)
+        expect(messages[0].excerpt).toBe(msg1)
+        expect(messages[0].location.position).toEqual([[0,0],[0,0]])
+        expect(messages[0].severity).toBe('info')
+        expect(messages[0].location.file).toMatch(badPathRegex)
+        expect(messages[1].excerpt).toBe(msg2)
+        expect(messages[1].location.position).toEqual([[0,0],[0,0]])
+        expect(messages[1].severity).toBe('info')
+        expect(messages[1].location.file).toMatch(badPathRegex)
