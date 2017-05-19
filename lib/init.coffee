@@ -52,10 +52,17 @@ module.exports =
       params.push("--add-select=" + @addSelectCodes)
     if @ignoreCodes
       params.push("--add-ignore=" + @ignoreCodes)
-    options = { stream: 'stderr', allowEmptyStderr: true }
+    options = { stream: 'both', allowEmptyStderr: true }
     return helpers.exec(@executablePath, params, options)
 
   parseMessages: (output) ->
+    if output.stdout
+      # used as of pydocstyle 2.0.0
+      output = output.stdout
+    else
+      # used in pydocstyle < 2
+      output = output.stderr
+
     # parse lint output
     output = output.replace(/:[\r\n]\s+/mg, " | ") # combine multiline output
     messages = helpers.parse(output,
