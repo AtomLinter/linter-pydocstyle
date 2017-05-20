@@ -69,7 +69,17 @@ module.exports =
                              "^(?<file>.+):(?<line>\\d+).+ \\| (?<message>.+)",
                              {flags: 'gm'})
     messages.forEach (msg) ->
-      msg.type = "Info"
+      msg.severity = 'info'
+
+      msg.excerpt = msg.text
+      delete msg.text
+
+      msg.location = {
+        file: msg.filePath
+        position: msg.range
+      }
+      delete msg.filePath
+      delete msg.range
     return messages
 
   provideLinter: ->
@@ -77,7 +87,7 @@ module.exports =
       name: 'pydocstyle'
       grammarScopes: ['source.python']
       scope: 'file'
-      lintOnFly: false
+      lintsOnChange: false
       lint: (textEditor) =>
         if (@ignoreFiles == '' || textEditor.getPath().indexOf(@ignoreFiles) == -1)
           return @lintPath textEditor.getPath()
