@@ -1,5 +1,14 @@
 # Change Log
 
+## [v0.4.7](https://github.com/AtomLinter/linter-pydocstyle/tree/v0.4.7) (2017-05-20)
+[Full Changelog](https://github.com/AtomLinter/linter-pydocstyle/compare/v0.4.6...v0.4.7)
+
+**Implemented enhancements:**
+
+- Update to linter v2 [\#68](https://github.com/AtomLinter/linter-pydocstyle/pull/68) ([dirk-thomas](https://github.com/dirk-thomas))
+- Support pydocstyle v2 [\#67](https://github.com/AtomLinter/linter-pydocstyle/pull/67) ([dirk-thomas](https://github.com/dirk-thomas))
+- Update atom-linter to version 10.0.0 🚀 [\#65](https://github.com/AtomLinter/linter-pydocstyle/pull/65) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+
 ## [v0.4.6](https://github.com/AtomLinter/linter-pydocstyle/tree/v0.4.6) (2017-04-09)
 [Full Changelog](https://github.com/AtomLinter/linter-pydocstyle/compare/v0.4.5...v0.4.6)
 
