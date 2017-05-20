@@ -1,4 +1,6 @@
 # Project specific config
+dist: trusty
+
 matrix:
   include:
     - os: linux
